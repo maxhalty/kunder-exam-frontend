@@ -1,8 +1,11 @@
 import { NgModule } from '@angular/core';
 import { HomeComponent } from './home/home.component';
+import { BannerComponent } from './banner/banner';
 @NgModule({
-	declarations: [HomeComponent],
+	declarations: [HomeComponent,
+    BannerComponent],
 	imports: [],
-	exports: [HomeComponent]
+	exports: [HomeComponent,
+    BannerComponent]
 })
 export class ComponentsModule {}
