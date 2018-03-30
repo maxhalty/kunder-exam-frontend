@@ -1,5 +1,15 @@
 <!-- Generated template for the BannerComponent component -->
-<ion-content>
-    <img *ngIf="banner.backgroundImg" [src]="banner.backgroundImg" />
-    <img *ngIf="banner.productImg" [src]="banner.productImg" />
+<ion-content *ngIf="banner.show">
+	<div *ngIf="banner.type=='plan'" class="planContainer">
+		<span class="descriptionBanner">{{banner.productDescription}}</span>
+		<button class="buttonBanner" (click)='OpenUrl();'>
+      		<span>{{banner.buttonText}}</span>
+    	</button>
+    	<img [src]="banner.backgroundImg" />
+	</div>
+	<div *ngIf="banner.type=='cellphone'" class="cellphoneContainer">
+	    <span class="prodNameBanner">{{banner.productName}}</span>
+	    <span class="prodDescBanner">{{banner.productDescription}}</span>
+    	<img class="prodImage" [src]="banner.productImg" />
+	</div>
 </ion-content>
