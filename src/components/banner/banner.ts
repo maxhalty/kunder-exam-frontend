@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
-import { InAppBrowser } from '@ionic-native/in-app-browser';
 
 /**
  * Generated class for the BannerComponent component.
@@ -29,8 +28,7 @@ export class BannerComponent {
   }
 
   OpenUrl() {
-  	console.log('Open banner link');
-  	//let browser = new InAppBrowser(this.banner.link, '_system');
+  	window.open(this.banner.link, "_system");
   } 
 
 }
