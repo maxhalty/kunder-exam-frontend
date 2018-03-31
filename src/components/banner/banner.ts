@@ -29,7 +29,8 @@ export class BannerComponent {
   }
 
   OpenUrl() {
-  	let browser = new InAppBrowser(this.banner.link, '_system');
+  	console.log('Open banner link');
+  	//let browser = new InAppBrowser(this.banner.link, '_system');
   } 
 
 }
